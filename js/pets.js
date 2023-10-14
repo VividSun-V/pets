@@ -104,10 +104,6 @@ const menuList = document.querySelector(".header__menu-list-pets");
 const wrapperheader = document.querySelector(".header__menu-wrapper-pets");
 const bodyWrapper = document.querySelector(".wrapper-pets");
 
-/*const makeOpacityWrapper = (str) => {
-    bodyWrapper.style.opacity = str;
-  };*/
-
 const removeClassBurger = () => {
   menuList.classList.remove("header__menu-list--active");
   wrapperheader.classList.remove("header__menu-wrapper--active");
@@ -337,7 +333,7 @@ const makePopupContent = (pet) => {
   inoculationsPetsPopup.innerHTML = pet.inoculations.join(", ");
   diseasesPetsPopup.innerHTML = pet.diseases.join(", ");
   parasitesPetsPopup.innerHTML = pet.parasites.join(", ");
-  imgPetsPopup.src = `${pet.img.split("").slice(13).join("")}`;
+  imgPetsPopup.src = pet;
 };
 
 const searchPet = (arr, name) => {
