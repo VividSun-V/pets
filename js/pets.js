@@ -25,7 +25,7 @@ const dataArr = [
   },
   {
     name: "Woody",
-    img: "assets/images/woody.png",
+    img: "images/woody.png",
     type: "Dog",
     breed: "Golden Retriever",
     description:
@@ -37,7 +37,7 @@ const dataArr = [
   },
   {
     name: "Scarlett",
-    img: "assets/images/scarlett.png",
+    img: "images/scarlett.png",
     type: "Dog",
     breed: "Jack Russell Terrier",
     description:
@@ -49,7 +49,7 @@ const dataArr = [
   },
   {
     name: "Katrine",
-    img: "assets/images/katrine.png",
+    img: "images/katrine.png",
     type: "Cat",
     breed: "British Shorthair",
     description:
@@ -85,7 +85,7 @@ const dataArr = [
   },
   {
     name: "Charly",
-    img: "assets/images/charly.png",
+    img: "images/charly.png",
     type: "Dog",
     breed: "Jack Russell Terrier",
     description:
@@ -132,7 +132,7 @@ const toggleBurger = () => {
 
 const lazyNewPage = (anchor) => {
   setTimeout(() => {
-    window.location.href = `https://rolling-scopes-school.github.io/anjeli-art-JSFE2023Q1/shelter/${anchor.getAttribute(
+    window.location.href = `https://https://anjeli-art.github.io/shelter/${anchor.getAttribute(
       "href"
     )}`;
   }, 750);
@@ -214,7 +214,7 @@ const createShuffledPets = () => {
 const updatePetCards = (petsToDisplay) => {
   petCardsContainer.innerHTML = "";
   petsToDisplay.forEach((pet) => {
-    const img = `../../${pet.img.split("").slice(13).join("")}`;
+    const img = pet.img;
     const petCard = document.createElement("div");
     petCard.className = "our-friends__slider-item-pets";
     petCard.addEventListener("click", () => {});

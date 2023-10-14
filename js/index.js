@@ -132,7 +132,7 @@ const toggleBurger = () => {
 const lazyNewPage = (anchor) => {
   window.location.hash = "";
   setTimeout(() => {
-    window.location.href = `https://.github.io/anjeli-art/shelter/${anchor.getAttribute(
+    window.location.href = `https://anjeli-art.github.io/shelter/${anchor.getAttribute(
       "href"
     )}`;
   }, 750);
@@ -239,7 +239,7 @@ function renderSlide(slide) {
 
     const cardImage = document.createElement("img");
     cardImage.className = "our-friends__slider-img";
-    cardImage.src = `${pet.img.split("").slice(13).join("")}`;
+    cardImage.src = pet.img;
     cardImage.alt = pet.name;
 
     card.appendChild(cardImage);
