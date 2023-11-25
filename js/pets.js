@@ -1,7 +1,7 @@
 const dataArr = [
   {
     name: "Jennifer",
-    img: "images/jennifer.png",
+    img: "images/Jennifer.png",
     type: "Dog",
     breed: "Labrador",
     description:
@@ -13,7 +13,7 @@ const dataArr = [
   },
   {
     name: "Sophia",
-    img: "images/sophia.png",
+    img: "images/Sophia.png",
     type: "Dog",
     breed: "Shih tzu",
     description:
@@ -25,7 +25,7 @@ const dataArr = [
   },
   {
     name: "Woody",
-    img: "images/woody.png",
+    img: "images/Woody.png",
     type: "Dog",
     breed: "Golden Retriever",
     description:
@@ -37,7 +37,7 @@ const dataArr = [
   },
   {
     name: "Scarlett",
-    img: "images/scarlett.png",
+    img: "images/Scarlett.png",
     type: "Dog",
     breed: "Jack Russell Terrier",
     description:
@@ -49,7 +49,7 @@ const dataArr = [
   },
   {
     name: "Katrine",
-    img: "images/katrine.png",
+    img: "images/Katrine.png",
     type: "Cat",
     breed: "British Shorthair",
     description:
@@ -61,7 +61,7 @@ const dataArr = [
   },
   {
     name: "Timmy",
-    img: "images/timmy.png",
+    img: "images/Timmy.png",
     type: "Cat",
     breed: "British Shorthair",
     description:
@@ -73,7 +73,7 @@ const dataArr = [
   },
   {
     name: "Freddie",
-    img: "images/freddie.png",
+    img: "images/Freddie.png",
     type: "Cat",
     breed: "British Shorthair",
     description:
@@ -85,7 +85,7 @@ const dataArr = [
   },
   {
     name: "Charly",
-    img: "images/charly.png",
+    img: "images/Charly.png",
     type: "Dog",
     breed: "Jack Russell Terrier",
     description:
