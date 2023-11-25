@@ -128,7 +128,7 @@ const toggleBurger = () => {
 
 const lazyNewPage = (anchor) => {
   setTimeout(() => {
-    window.location.href = `https://https://anjeli-art.github.io/shelter/${anchor.getAttribute(
+    window.location.href = `https://anjeli-art.github.io/shelter/${anchor.getAttribute(
       "href"
     )}`;
   }, 750);
