@@ -213,7 +213,7 @@ const updatePetCards = (petsToDisplay) => {
     const img = pet.img;
     const petCard = document.createElement("div");
     petCard.className = "our-friends__slider-item-pets";
-    petCard.addEventListener("click", () => {});
+    // petCard.addEventListener("click", () => addClassPopup());
     petCardsContainer.append(petCard);
     const petCardImg = document.createElement("img");
     petCardImg.className = "our-friends__slider-img-pets";
@@ -333,33 +333,38 @@ const makePopupContent = (pet) => {
   inoculationsPetsPopup.innerHTML = pet.inoculations.join(", ");
   diseasesPetsPopup.innerHTML = pet.diseases.join(", ");
   parasitesPetsPopup.innerHTML = pet.parasites.join(", ");
-  imgPetsPopup.src = pet;
+  imgPetsPopup.src = pet.img;
 };
 
 const searchPet = (arr, name) => {
   return arr.find((el) => el.name === name);
 };
 
-const removeClassPopup = () => {
+function removeClassPopup() {
   popupWrapper.classList.remove("our-friends__popup--active");
   popup.classList.remove("friends__popup--active");
   body.classList.remove("disable-scroll");
-};
+}
 
-const addClassPopup = () => {
+function addClassPopup() {
   popupWrapper.classList.add("our-friends__popup--active");
   popup.classList.add("friends__popup--active");
   body.classList.add("disable-scroll");
-};
+}
 
-itemsPets.forEach((itemPets) =>
-  itemPets.addEventListener("click", (e) => {
-    const petName = itemPets.childNodes[1].innerHTML;
-    const pet = searchPet(dataArr, petName);
-    makePopupContent(pet);
-    addClassPopup();
-  })
-);
+function changeListener() {
+  itemsPets.forEach((itemPets) =>
+    itemPets.addEventListener("click", (e) => {
+      const petName = itemPets.childNodes[1].innerHTML;
+      const pet = searchPet(dataArr, petName);
+      makePopupContent(pet);
+      addClassPopup();
+    })
+  );
+}
+
+changeListener();
+
 const popupToggle = (e) => {
   if (e.target === popupWrapper) {
     removeClassPopup();
