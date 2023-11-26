@@ -213,7 +213,6 @@ const updatePetCards = (petsToDisplay) => {
     const img = pet.img;
     const petCard = document.createElement("div");
     petCard.className = "our-friends__slider-item-pets";
-    // petCard.addEventListener("click", () => addClassPopup());
     petCardsContainer.append(petCard);
     const petCardImg = document.createElement("img");
     petCardImg.className = "our-friends__slider-img-pets";
@@ -273,21 +272,25 @@ displayCurrentPage();
 firstPageBtn.addEventListener("click", () => {
   currentPage = 1;
   displayCurrentPage();
+  changeListener();
 });
 
 prevPageBtn.addEventListener("click", () => {
   currentPage--;
   displayCurrentPage();
+  changeListener();
 });
 
 nextPageBtn.addEventListener("click", () => {
   currentPage++;
   displayCurrentPage();
+  changeListener();
 });
 
 lastPageBtn.addEventListener("click", () => {
   currentPage = totalPages;
   displayCurrentPage();
+  changeListener();
 });
 
 window.addEventListener("resize", () => {
@@ -299,7 +302,6 @@ window.addEventListener("resize", () => {
 
 const body = document.querySelector("body");
 const popupBtn = document.querySelector(".our-friends__popup-close-btn");
-const itemsPets = document.querySelectorAll(".our-friends__slider-item-pets");
 const popupWrapper = document.querySelector(".our-friends__popup-wrapper");
 const titlePopup = document.querySelector(".our-friends__popup-title");
 const subtitlePopup = document.querySelector(".our-friends__popup-subtitle");
@@ -353,6 +355,7 @@ function addClassPopup() {
 }
 
 function changeListener() {
+  const itemsPets = document.querySelectorAll(".our-friends__slider-item-pets");
   itemsPets.forEach((itemPets) =>
     itemPets.addEventListener("click", (e) => {
       const petName = itemPets.childNodes[1].innerHTML;

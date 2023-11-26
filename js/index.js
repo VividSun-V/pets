@@ -269,6 +269,7 @@ function updateSlides(direction) {
   }
 
   renderSlide(currentSlide);
+  changeListener();
 }
 
 prevArrow.addEventListener("click", () => updateSlides("left"));
@@ -342,14 +343,19 @@ const addClassPopup = () => {
   body.classList.add("disable-scroll");
 };
 
-itemsPets.forEach((itemPets) =>
-  itemPets.addEventListener("click", (e) => {
-    const petName = itemPets.childNodes[1].innerHTML;
-    const pet = searchPet(dataPets, petName);
-    makePopupContent(pet);
-    addClassPopup();
-  })
-);
+function changeListener() {
+  const itemsPets = document.querySelectorAll(".our-friends__slider-item");
+  itemsPets.forEach((itemPets) =>
+    itemPets.addEventListener("click", (e) => {
+      const petName = itemPets.childNodes[1].innerHTML;
+      const pet = searchPet(dataPets, petName);
+      makePopupContent(pet);
+      addClassPopup();
+    })
+  );
+}
+
+changeListener();
 
 const popupToggle = (e) => {
   if (e.target === popupWrapper) {
